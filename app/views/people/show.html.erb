@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= image_tag(@person.image.url(:small)) %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @person.birthdate %>
+</p>
+
+<p>
+  <strong>Place of Birth:</strong>
+  <%= @person.birthplace %>
+</p>
+
+<p>
+  <strong>Deathdate:</strong>
+  <%= @person.deathdate %>
+</p>
+
+<p>
+  <strong>Place of Death:</strong>
+  <%= @person.deathplace %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @person.story %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
