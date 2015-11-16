@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  resources :background_images
+  get 'static_pages/home'
+
+  get 'static_pages/nav'
+
   resources :people
 
-  root 'people#index'
+  root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

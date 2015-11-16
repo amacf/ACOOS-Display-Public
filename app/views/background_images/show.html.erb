@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@background_image.image(:small)) %>
+</p>
+
+<%= link_to 'Edit', edit_background_image_path(@background_image) %> |
+<%= link_to 'Back', background_images_path %>
