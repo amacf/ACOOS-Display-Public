@@ -42,10 +42,10 @@
   <div class="pagebar">
     <% unless @currentPage == @totalPages %>
       <%= link_to controller: :people, action: :kioskIndex, page: @currentPage, search: params[:search] do %>
-        <h2>Page <%= @currentPage %> of <%= @totalPages %> </h2>
+        <center><h2>Page <%= @currentPage %> of <%= @totalPages %> </h2></center>
       <% end %>
     <% else %>
-      <h2>Page <%= @currentPage %> of <%= @totalPages %> </h2>
+      </center><h2>Page <%= @currentPage %> of <%= @totalPages %> </h2></center>
     <% end %>
   </div>
 
