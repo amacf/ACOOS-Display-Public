@@ -4,9 +4,11 @@
 
 
 .peoplepage{
+	background-color:white;
 	width:1280px;
 	height:1024px;
 	.navbar{
+		z-index: 3;
 		position: absolute;
 		left:0px;
 		top:0px;
@@ -17,6 +19,7 @@
 		box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.50);
 	}
 	.peoplebox{
+		background-color:white;
 		padding: 0;
 		position: absolute;
 		top:11%;
@@ -24,6 +27,7 @@
 		width:90%;
 		height:87%;
 		ul {
+			background-color:white;
 			margin: 0;
 			height:100%;
 			padding-left:0px;
@@ -33,19 +37,36 @@
 			-moz-column-fill: auto;
 			column-fill: auto;
 		}
+		a:hover{
+			background-color:white;
+		}
 		.personbox{
+			overflow: auto;
 			display: inline-block;
 			width:100%;
 			height:140px;
 			//background:#333;
+			background-color: white;
 			padding-top: 0px;
 			margin:0;
+			a{
+				background-color: white;
+				border:none;
+				text-decoration: none;
+			}
+			a:hover{
+				border:none;
+				background-color: white;
+				text-decoration: none;
+			}
 			img {
+				background-color:white;
 				clear:left;
 				float:left;
 				padding-right: 25px;
 			}
 			h2 {
+				background-color:white;
 				font-family: Arial-BoldMT;
 				font-size: 24px;
 				color: #000000;
@@ -55,7 +76,11 @@
 				margin-bottom: 0px;
 				margin:0;
 			}
-			p{
+			p{	
+				text-decoration: none;
+				border:none;
+				background-color: white;
+				color:black;
 				padding-top:0px;
 				padding-bottom:0px;
 				line-height:12px;

@@ -11,28 +11,28 @@
 
     <ul>
       <% @people.each do |person| %>
-        <div class="personbox">
-          <%= image_tag(person.image.url(:thumb)) %>
-          <h2><%= person.name %></h2>
+        <%= link_to person do %>
+          <div class="personbox">
+            <%= image_tag(person.image.url(:thumb)) %>
+            <h2><%= person.name %></h2>
 
-          <% if !person.birthdate.blank? && person.deathdate.blank? %>
-            <p>Born: <%= person.birthdate %></p>
-          <% elsif person.birthdate.blank? && !person.deathdate.blank? %>
-            <p>Died: <%= person.deathdate %></p>
-          <% elsif !person.birthdate.blank? && !person.deathdate.blank? %>
-            <p><%= person.birthdate %> - <%= person.deathdate %></p>
-          <% end %>
+            <% if !person.birthdate.blank? && person.deathdate.blank? %>
+              <p>Born: <%= person.birthdate %></p>
+            <% elsif person.birthdate.blank? && !person.deathdate.blank? %>
+              <p>Died: <%= person.deathdate %></p>
+            <% elsif !person.birthdate.blank? && !person.deathdate.blank? %>
+              <p><%= person.birthdate %> - <%= person.deathdate %></p>
+            <% end %>
 
-          <% if !person.birthplace.blank? && person.deathplace.blank? %>
-            <p><%= person.birthplace %></p>
-          <% elsif person.birthplace.blank? && !person.deathplace.blank? %>
-            <p><%= person.deathplace %></p>
-          <% elsif !person.birthplace.blank? && !person.deathplace.blank? %>
-            <p><%= person.birthplace %> - <%= person.deathplace %></p>
-          <% end %>
-
-          <p><%= link_to 'Show', person %></p>
-        </div>
+            <% if !person.birthplace.blank? && person.deathplace.blank? %>
+              <p><%= person.birthplace %></p>
+            <% elsif person.birthplace.blank? && !person.deathplace.blank? %>
+              <p><%= person.deathplace %></p>
+            <% elsif !person.birthplace.blank? && !person.deathplace.blank? %>
+              <p><%= person.birthplace %> - <%= person.deathplace %></p>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
     </ul>
 
