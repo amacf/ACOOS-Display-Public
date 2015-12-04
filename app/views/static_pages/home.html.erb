@@ -1,9 +1,23 @@
-<div class="background-slideshow">
-	<% @images.each do |i| %>
-    	<%= image_tag(i.image.url(:large)) %>
-   	<% end %>
-</div>
+<%= link_to controller: :static_pages, action: :nav do %>
+	<span class="homepage">
+		<div class="background-slideshow">
+			<% @images.each do |i| %>
+		    	<%= image_tag(i.image.url(:large)) %>
+		   	<% end %>
+		</div>
 
+		<div class="titlebox">
+			<center>
+				<h2>WELCOME TO</h2>
+				<h1>Armenian Church of Our Saviour</h1>
+				<p>First Armenian Church in America, Est. 1890</p>
+			</center>
+		</div>
 
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+		<div class='taptext'>
+			<center>
+				<h1>Tap To Start</h1>
+			</center>
+		</div>
+	</span>
+<% end %>

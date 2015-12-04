@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :background_images
-  get 'static_pages/home'
 
-  get 'static_pages/nav'
+  get '' => 'static_pages#home'
+  get 'nav' => 'static_pages#nav'
+  get 'people' => 'people#kioskIndex'
 
   resources :people
 
