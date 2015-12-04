@@ -5,6 +5,10 @@
 <span class='peoplepage'>
   <div class="navbar">
 
+  <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, method: "get") do %>
+  <input type="text" name="search" value=<%= params[:search] %>>
+  <input type="submit" value="Search">
+  <% end %>
   </div>
 
   <div class="peoplebox">
