@@ -40,13 +40,24 @@
   </div>
 
   <div class="pagebar">
-    <% unless @currentPage == @totalPages %>
-      <%= link_to controller: :people, action: :kioskIndex, page: @currentPage, search: params[:search] do %>
-        <center><h2>Page <%= @currentPage %> of <%= @totalPages %> </h2></center>
-      <% end %>
-    <% else %>
-      <center><h2>Page <%= @currentPage %> of <%= @totalPages %> </h2></center>
-    <% end %>
+    <hr>
+      <center><h2>
+        <% unless @currentPage == 1 %>
+          <%= link_to controller: :people, action: :kioskIndex, page: @currentPage-2, search: params[:search] do %>
+            <span id=leftbutton> <span id="leftarrow">&#10144;</span>Prev</span>
+          <% end %>
+        <% else %>
+          <span id=leftbutton> <span id="leftarrow">&#10144;</span>Prev</span>
+        <% end %>
+        Page <%= @currentPage %> of <%= @totalPages %>
+        <% unless @currentPage == @totalPages %>        
+          <%= link_to controller: :people, action: :kioskIndex, page: @currentPage, search: params[:search] do %>
+            <span id="rightbutton">Next&#10144;</span>
+          <% end %>
+        <% else %>
+          <span id="rightbutton">Next&#10144;</span>
+        <% end %>
+      </h2></center>
   </div>
 
 </span>

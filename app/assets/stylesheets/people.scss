@@ -69,6 +69,16 @@
 		margin: 0px;
 		width:100%;
 		top:92%;
+		a:hover{
+			text-decoration:none;
+			font-weight:bold;
+			color:black;
+			background-color:white;
+		}
+		a{
+			text-decoration:none;
+			color:black;
+		}
 		h2 {
 			font-family: Arial-BoldMT;
 			font-size: 24px;
@@ -78,6 +88,27 @@
 			padding-top:10px;
 			margin-bottom: 0px;
 			margin:0;
+		}
+		#leftarrow{	
+			display: inline-block;
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+		}
+		a #leftbutton{
+			color:black;
+		}
+		#leftbutton{
+			color:gray;
+			margin-right:35px;
+		}
+		a #rightbutton{
+			color:black;
+		}
+		#rightbutton{
+			color:gray;
+			margin-left:35px;
 		}
 	}
 }
