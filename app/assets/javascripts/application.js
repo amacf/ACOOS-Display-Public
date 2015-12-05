@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(document).ready(function(){
-	$(".navbar").on("click","input",function(){
+	$(".navbar").on("click touchstart","input",function(){
 	    if ($(this).is( ":focus" )) {
 	    	var request = new XMLHttpRequest();
 	    	request.open('get', '/people/keyboardOpen', false);
