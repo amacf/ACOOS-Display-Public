@@ -17,6 +17,15 @@
 		/* Rectangle 1: */
 		background: #202020;
 		box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.50);
+		form{
+			-webkit-user-drag: none;
+		    -webkit-touch-callout: all;
+		    -webkit-user-select: all;
+		    -khtml-user-select: all;
+		    -moz-user-select: all;
+		    -ms-user-select: all;
+		    user-select: all;
+		}
 	}
 	.peoplebox{
 		background-color:white;
