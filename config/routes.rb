@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'nav' => 'static_pages#nav'
   get 'people' => 'people#kioskIndex'
 
+  resources :people
+
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
