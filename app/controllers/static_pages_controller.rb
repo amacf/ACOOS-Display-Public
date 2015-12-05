@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def nav
+  	system("killall matchbox-keyboard");
   end
 end
