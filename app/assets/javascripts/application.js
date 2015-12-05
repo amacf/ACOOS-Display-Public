@@ -10,21 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//=require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
-$(".navpage").on("click","input",function(){
-    if ($(this).is( ":focus" )) {
-    	var request = new XMLHttpRequest();
-    	request.open('get', '/people/keyboardOpen', false);
-    	request.send(null);
-    	alert(request.responseText);
-    }else{
-        var request = new XMLHttpRequest();
-    	request.open('get', '/people/keyboardClose', false);
-    	request.send(null);
-    	alert(request.responseText);
-    }
-}
+$(document).ready(function(){
+	$(".navbar").on("click","input",function(){
+	    if ($(this).is( ":focus" )) {
+	    	var request = new XMLHttpRequest();
+	    	request.open('get', '/people/keyboardOpen', false);
+	    	request.send(null);
+	    }else{
+	        var request = new XMLHttpRequest();
+	    	request.open('get', '/people/keyboardClose', false);
+	    	request.send(null);
+	    }
+	});
+});
