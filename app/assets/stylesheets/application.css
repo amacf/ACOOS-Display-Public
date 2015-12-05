@@ -14,8 +14,8 @@
  *= require_self
  */
 
-* {
-    -webkit-user-drag: none;
+*:not(input) {
+    -webkit-user-drag: none; 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
