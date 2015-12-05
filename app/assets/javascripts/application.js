@@ -16,14 +16,14 @@
 //= require_tree .
 
 $(document).ready(function(){
-	$(".navbar").on("click touchstart","input",function(){
-	    if ($(this).is( ":focus" )) {
+	$(".navbar").on("click touchend","input",function(){
 	    	var request = new XMLHttpRequest();
-	    	request.open('get', '/people/keyboardOpen', false);
+	    	request.open('get', '/keyOpen', false);
 	    	request.send(null);
-	    }else{
+	});
+	$(".navpage").on("click touchstart",function(){
 	        var request = new XMLHttpRequest();
-	    	request.open('get', '/people/keyboardClose', false);
+	    	request.open('get', '/keyClose', false);
 	    	request.send(null);
 	    }
 	});
