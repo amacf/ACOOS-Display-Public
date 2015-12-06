@@ -1,7 +1,23 @@
 <%= image_tag(@person.image.url(:medium)) %>
-<span id="name"><%= @person.name %></h1></span>
-<span id="birthdate"><%= @person.birthdate %></span>
-<span id="birthplace"><%= @person.birthplace %></span>
-<span id="deathdate"><%= @person.deathdate %></span>
-<span id="deathplace"><%= @person.deathplace %></span>
-<span id="story"><%= @person.story %></span>
+<div class="textArea">
+  <span id="name"><%= @person.name %></h1></span>
+  <span id="datestring">
+    <% if !@person.birthdate.blank? && @person.deathdate.blank? %>
+      <p>Born: <%= @person.birthdate %></p>
+    <% elsif @person.birthdate.blank? && !@person.deathdate.blank? %>
+      <p>Died: <%= @person.deathdate %></p>
+    <% elsif !@person.birthdate.blank? && !@person.deathdate.blank? %>
+      <p><%= @person.birthdate %> - <%= @person.deathdate %></p>
+    <% end %>
+  </span>
+  <span id="placestring">
+    <% if !@person.birthplace.blank? && @person.deathplace.blank? %>
+      <p><%= @person.birthplace %></p>
+    <% elsif @person.birthplace.blank? && !@person.deathplace.blank? %>
+      <p><%= @person.deathplace %></p>
+    <% elsif !@person.birthplace.blank? && !@person.deathplace.blank? %>
+      <p><%= @person.birthplace %> - <%= @person.deathplace %></p>
+    <% end %>
+  </span>
+  <span id="story"><%= @person.story %></span>
+</div>

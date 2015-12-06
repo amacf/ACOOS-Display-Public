@@ -212,9 +212,57 @@
 .overlayDiv{
 	position:absolute;
 	z-index: 3;
-	width:1600px;
-	height:800px;
+	width:1100px;
+	height:700px;
 	background: #202020;
-	top:30%;
-	left:30%;
+	top:3%;
+	left:3%;
+	img{
+		float:left;
+		margin-left: 60px;
+		margin-top:50px;
+	}
+	.textArea{
+		margin-left:40px;
+		height:auto;
+		width:520px;
+		position:relative;
+		float:left;
+		top: 50%;
+		transform: translateY(-60%);
+	}
+	#name{
+		position:relative;
+		display:block;
+		color:white;
+		font-family: Arial-BoldMT;
+		font-size: 32px;
+		letter-spacing: 1px;
+		line-height: 28px;
+	}
+	#datestring{
+		position:relative;
+		display:block;
+		color:white;
+		p{
+			font-size: 24px;
+			line-height: 21px;
+		}
+	}
+	#placestring{
+		color:white;
+		position:relative;
+		display:block;
+		p{
+			font-size: 24px;
+			line-height: 21px;
+		}
+	}
+	#story{
+		color:white;
+		position:relative;
+		display:block;
+		font-size: 20px;
+		line-height: 21px;
+	}
 }
