@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function(){   
-  $(".navbar").on("click touchend","input",function(){   
+  $(".navbar").on("click touchend","#textBox",function(){   
         var request = new XMLHttpRequest();
         request.open('get', '/keyOpen', false);
         request.send(null);
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, id: "searchForm" ,method: "get") do %>
   <input type="text" name="search" id="textBox" value=<%= params[:search] %>>
-  <input type="submit" class="searchButton" value="Search">
+  <input type="submit" class="searchButton" id="searchButton" value="Search">
   <% end %>
   </div>
 
