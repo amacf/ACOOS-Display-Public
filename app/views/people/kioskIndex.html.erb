@@ -4,8 +4,8 @@ showPerson=function(id){
   request.open('get', "/kioskPeople/" + id, false);
   request.send(null);
   var $overlayDiv = $("<div class='overlayDiv'></div>");
-  $overlayDiv.append(request.response);
   $("body").append($overlayDiv);
+  $overlayDiv.append(request.response);
 }
 $(document).ready(function(){   
   $(".navbar").on("click touchend","#textBox",function(){   
@@ -14,7 +14,10 @@ $(document).ready(function(){
         request.send(null);
   });
   $(".peoplepage").on("click touchend",function(){
-    if ($(event.target).is(".personbox")){
+    if($('.overlayDiv').length){
+      $('.overlayDiv').remove();
+    }
+    else if ($(event.target).is(".personbox")){
       showPerson($(event.target).attr("id"));
     }
     else if ($(event.target).parent().is(".personbox")){
