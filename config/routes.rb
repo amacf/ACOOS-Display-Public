@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   get 'nav' => 'static_pages#nav'
   get 'people' => 'people#kioskIndex'
   get 'kioskPeople/:id' => 'people#kioskPeople'
+  get 'artifacts' => 'static_pages#artifacts'
+  get 'artifacts/churchHistory' => 'static_pages#churchHistory'
+  get 'artifacts/genocideHistory' => 'static_pages#genocideHistory'
+  get 'artifacts/genocideMap' => 'static_pages#genocideMap'
+  get 'artifacts/saroyanQuote' => 'static_pages#saroyanQuote'
+  get 'artifacts/aroianHistory' => 'static_pages#aroianHistory'
+  get 'artifacts/kazarianHistory' => 'static_pages#kazarianHistory'
 
   resources :people
 

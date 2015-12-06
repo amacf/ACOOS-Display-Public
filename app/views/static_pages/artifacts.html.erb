@@ -1,0 +1,46 @@
+<%= render :partial => "shared/redirectsHome" %>
+
+<span class="artifactspage">
+	<div class="navbar">
+	<%= button_to "Back", {controller: :static_pages, action: :nav}, {id: "backButton", class: "searchButton", method: :get}%>
+	</div>
+	
+	<div class="artifactButtons">
+		<%= link_to controller: :static_pages, action: :churchHistory do %>
+			<div class="artifactButton" id="nav1">
+				<center><h1>Church of Our Saviour History</h1></center>
+			</div>
+		<% end %>
+
+		<%= link_to controller: :static_pages, action: :genocideHistory do %>
+			<div class="artifactButton" id="nav2">
+				<center><h1>Armenian Genocide History</h1></center>
+			</div>
+		<% end %>
+
+		<%= link_to controller: :static_pages, action: :genocideMap do %>
+			<div class="artifactButton" id="nav2">
+				<center><h1>Armenian Genocide Map</h1></center>
+			</div>
+		<% end %>
+
+		<%= link_to controller: :static_pages, action: :saroyanQuote do %>
+			<div class="artifactButton" id="nav2">
+				<center><h1>William Saroyan<br>Quote</h1></center>
+			</div>
+		<% end %>
+
+		<%= link_to controller: :static_pages, action: :aroianHistory do %>
+			<div class="artifactButton" id="nav1">
+				<center><h1>Aroian History</h1></center>
+			</div>
+		<% end %>
+
+		<%= link_to controller: :static_pages, action: :kazarianHistory do %>
+			<div class="artifactButton" id="nav1">
+				<center><h1>Kazarian History</h1></center>
+			</div>
+		<% end %>
+	</div>
+
+</span>
