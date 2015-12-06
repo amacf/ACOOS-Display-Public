@@ -2,7 +2,7 @@
 
 <span class="navpage">
 	<div class="navbar">
-
+	<%= button_to "Back", {controller: :static_pages, action: :home}, {id: "backButton", class: "searchButton", method: :get}%>
 	</div>
 	
 	<%= link_to controller: :people, action: :kioskIndex do %>
