@@ -17,10 +17,11 @@ $(document).ready(function(){
 
 <span class='peoplepage'>
   <div class="navbar">
+  <%= button_to "Back", {controller: :static_pages, action: :nav}, {id: "backButton", class: "searchButton", method: :get}%>
 
-  <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, method: "get") do %>
+  <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, id: "searchForm" ,method: "get") do %>
   <input type="text" name="search" id="textBox" value=<%= params[:search] %>>
-  <input type="submit" id="searchButton" value="Search">
+  <input type="submit" class="searchButton" value="Search">
   <% end %>
   </div>
 
@@ -58,23 +59,19 @@ $(document).ready(function(){
 
   <div class="pagebar">
     <hr>
-      <center><h2>
+      <center>
         <% unless @currentPage == 1 %>
-          <%= link_to controller: :people, action: :kioskIndex, page: @currentPage-2, search: params[:search] do %>
-            <span id=leftbutton> <span id="leftarrow">&#10144;</span>Prev</span>
-          <% end %>
+          <%= button_to "Previous",{controller: :people, action: :kioskIndex}, {id: "prevButton", class: "searchButton", method: :get, params: {page: @currentPage-2, search: params[:search]}, style: "display:inline;"}%>
         <% else %>
-          <span id=leftbutton> <span id="leftarrow">&#10144;</span>Prev</span>
+          <p id="leftButton">Previous</p>
         <% end %>
-        Page <%= @currentPage %> of <%= @totalPages %>
+        <h1 style="display:inline;">Page <%= @currentPage %> of <%= @totalPages %></h1>
         <% unless @currentPage == @totalPages %>        
-          <%= link_to controller: :people, action: :kioskIndex, page: @currentPage, search: params[:search] do %>
-            <span id="rightbutton">Next&#10144;</span>
-          <% end %>
+          <%= button_to "Next",{controller: :people, action: :kioskIndex}, {id: "nextButton", class: "searchButton", method: :get, params: {page: @currentPage, search: params[:search]}} %>
         <% else %>
-          <span id="rightbutton">Next&#10144;</span>
+          <p id="rightButton">Next</p>
         <% end %>
-      </h2></center>
+      </center>
   </div>
 
 </span>
