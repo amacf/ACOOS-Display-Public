@@ -1,4 +1,12 @@
 <script type="text/javascript">
+showPerson=function(id){
+  var request = new XMLHttpRequest();
+  request.open('get', "/kioskPeople/" + id, false);
+  request.send(null);
+  var $overlayDiv = $("<div class='overlayDiv'></div>");
+  $overlayDiv.append(request.response);
+  $("body").append($overlayDiv);
+}
 $(document).ready(function(){   
   $(".navbar").on("click touchend","#textBox",function(){   
         var request = new XMLHttpRequest();
@@ -6,10 +14,16 @@ $(document).ready(function(){
         request.send(null);
   });
   $(".peoplepage").on("click touchend",function(){
-          if(!$(event.target).is("input")){
-          var request = new XMLHttpRequest();
-          request.open('get', '/keyClose', false);
-          request.send(null);
+    if ($(event.target).is(".personbox")){
+      showPerson($(event.target).attr("id"));
+    }
+    else if ($(event.target).parent().is(".personbox")){
+      showPerson($(event.target).parent().attr("id"));
+    }
+    else if(!$(event.target).is("input")){
+      var request = new XMLHttpRequest();
+      request.open('get', '/keyClose', false);
+      request.send(null);
     }
   });
 });
@@ -29,8 +43,7 @@ $(document).ready(function(){
 
     <ul>
       <% @people.each do |person| %>
-        <%= link_to person do %>
-          <div class="personbox">
+          <div class="personbox" id=<%= person.id %>>
             <%= image_tag(person.image.url(:thumb)) %>
             <h2><%= person.name %></h2>
 
@@ -50,7 +63,6 @@ $(document).ready(function(){
               <p><%= person.birthplace %> - <%= person.deathplace %></p>
             <% end %>
           </div>
-        <% end %>
       <% end %>
     </ul>
 

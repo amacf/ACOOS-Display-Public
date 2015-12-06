@@ -4,6 +4,7 @@
 
 
 .peoplepage{
+	z-index: -1;
 	background-color:white;
 	width:1280px;
 	height:1024px;
@@ -207,4 +208,13 @@
 			margin-top: 0px;
 		}
 	}
+}
+.overlayDiv{
+	position:absolute;
+	z-index: 3;
+	width:1600px;
+	height:800px;
+	background: #202020;
+	top:30%;
+	left:30%;
 }

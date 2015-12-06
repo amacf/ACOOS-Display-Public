@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '' => 'static_pages#home'
   get 'nav' => 'static_pages#nav'
   get 'people' => 'people#kioskIndex'
+  get 'kioskPeople/:id' => 'people#kioskPeople'
 
   resources :people
 
