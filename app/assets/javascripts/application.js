@@ -14,19 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function(){
-alert("ready");
-	$(".navbar").on("click touchend","input",function(){	    	
-		var request = new XMLHttpRequest();
-	    	request.open('get', '/keyOpen', false);
-	    	request.send(null);
-	});
-	$(".peoplepage").on("click touchend",function(){
-	        if(!$(event.target).is("input")){
-			var request = new XMLHttpRequest();
-	    		request.open('get', '/keyClose', false);
-	    		request.send(null);
-		}
-	});
-});
