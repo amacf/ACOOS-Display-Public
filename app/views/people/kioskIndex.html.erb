@@ -1,5 +1,6 @@
 <script type="text/javascript">
 showPerson=function(id){
+  $(".peoplepage").attr('id','blurred');
   var request = new XMLHttpRequest();
   request.open('get', "/kioskPeople/" + id, false);
   request.send(null);
@@ -7,15 +8,16 @@ showPerson=function(id){
   $("body").append($overlayDiv);
   $overlayDiv.append(request.response);
 }
-$(document).ready(function(){   
-  $(".navbar").on("click touchend","#textBox",function(){   
+$(document).ready(function(){
+  $(".peoplepage").on("click touchend",function(){
+    if($('.overlayDiv').length){
+      $(".peoplepage").attr('id','');
+      $('.overlayDiv').remove();
+    }
+    else if ($(event.target).is("#textBox")){
         var request = new XMLHttpRequest();
         request.open('get', '/keyOpen', false);
         request.send(null);
-  });
-  $(".peoplepage").on("click touchend",function(){
-    if($('.overlayDiv').length){
-      $('.overlayDiv').remove();
     }
     else if ($(event.target).is(".personbox")){
       showPerson($(event.target).attr("id"));
@@ -32,7 +34,7 @@ $(document).ready(function(){
 });
 </script>
 
-<span class='peoplepage'>
+<div class='peoplepage'>
   <div class="navbar">
   <%= button_to "Back", {controller: :static_pages, action: :nav}, {id: "backButton", class: "searchButton", method: :get}%>
 
@@ -89,4 +91,4 @@ $(document).ready(function(){
       </center>
   </div>
 
-</span>
+</div>
