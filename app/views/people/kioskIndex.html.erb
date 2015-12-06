@@ -20,7 +20,7 @@ $(document).ready(function(){
 
   <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, method: "get") do %>
   <input type="text" name="search" id="textBox" value=<%= params[:search] %>>
-  <input type="submit" value="&#128269;" id="searchButton">
+  <input type="submit" id="searchButton" value="Search">
   <% end %>
   </div>
 

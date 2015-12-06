@@ -20,20 +20,56 @@
 		form{
 			position:absolute;
 			right:2%;
-			top:28%;
+			top:20%;
 			#textBox{
-				height:35px;
-				width:250px;
+				height:50px;
+				width:275px;
 				padding-left:8px;
 				-webkit-border-radius: 10px;
 				-moz-border-radius: 10px;
 				border-radius: 10px;
 				font-family: arial;
-				font-size: 20px;
+				font-size: 22px;
 			}
-			#searchButton{
-				font-size:36px;
+			#searchButton {
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
+				background:-moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+				background:-webkit-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+				background:-o-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+				background:-ms-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+				background:linear-gradient(to bottom, #e8e8e8 5%, #ababab 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ababab',GradientType=0);
+				background-color:#e8e8e8;
+				-moz-border-radius:28px;
+				-webkit-border-radius:28px;
+				border-radius:28px;
+				border:1px solid #525252;
+				display:inline-block;
+				cursor:pointer;
+				color:#000000;
+				font-family:Arial;
+				font-size:20px;
+				padding:16px 31px;
+				text-decoration:none;
+				text-shadow:0px 1px 0px #595959;
+				width:100px;
+				padding-left:18px;
 			}
+			#searchButton:hover {
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ababab), color-stop(1, #e8e8e8));
+				background:-moz-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+				background:-webkit-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+				background:-o-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+				background:-ms-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+				background:linear-gradient(to bottom, #ababab 5%, #e8e8e8 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ababab', endColorstr='#e8e8e8',GradientType=0);
+				background-color:#ababab;
+			}
+			#searchButton:active {
+				position:relative;
+				top:1px;
+			}
+
 		}
 	}
 	.peoplebox{
@@ -101,7 +137,8 @@
 				color:black;
 				padding-top:0px;
 				padding-bottom:0px;
-				line-height:12px;
+				font-size:18px;
+				line-height:20px;
 			}
 		}
 	}
