@@ -1,6 +1,5 @@
 <script type="text/javascript">
 showPerson=function(id){
-  $(".peoplepage").attr('id','blurred');
   var request = new XMLHttpRequest();
   request.open('get', "/kioskPeople/" + id, false);
   request.send(null);
@@ -11,7 +10,6 @@ showPerson=function(id){
 $(document).ready(function(){
   $(".peoplepage").on("click touchend",function(){
     if($('.overlayDiv').length){
-      $(".peoplepage").attr('id','');
       $('.overlayDiv').remove();
     }
     else if ($(event.target).is("#textBox")){
@@ -77,17 +75,23 @@ $(document).ready(function(){
   <div class="pagebar">
     <hr>
       <center>
-        <% unless @currentPage == 1 %>
-          <%= button_to "Previous",{controller: :people, action: :kioskIndex}, {id: "prevButton", class: "searchButton", method: :get, params: {page: @currentPage-2, search: params[:search]}, style: "display:inline;"}%>
-        <% else %>
-          <p id="leftButton">Previous</p>
-        <% end %>
-        <h1 style="display:inline;">Page <%= @currentPage %> of <%= @totalPages %></h1>
-        <% unless @currentPage == @totalPages %>        
-          <%= button_to "Next",{controller: :people, action: :kioskIndex}, {id: "nextButton", class: "searchButton", method: :get, params: {page: @currentPage, search: params[:search]}} %>
-        <% else %>
-          <p id="rightButton">Next</p>
-        <% end %>
+	<% unless @totalPages == 0 %>
+          <% unless @currentPage == 1 %>
+            <%= button_to "Previous",{controller: :people, action: :kioskIndex}, {id: "prevButton", class: "searchButton", method: :get, params: {page: @currentPage-2, search: params[:search]}, style: "display:inline;"}%>
+          <% else %>
+            <p id="leftButton">Previous</p>
+          <% end %>
+          <h1 style="display:inline;">Page <%= @currentPage %> of <%= @totalPages %></h1>
+          <% unless @currentPage == @totalPages %>        
+            <%= button_to "Next",{controller: :people, action: :kioskIndex}, {id: "nextButton", class: "searchButton", method: :get, params: {page: @currentPage, search: params[:search]}} %>
+          <% else %>
+            <p id="rightButton">Next</p>
+          <% end %>
+	<% else %>
+	  <p id="leftButton">Previous</p>
+	  <h1 style="display:inline;">No results</h1>
+	  <p id="rightButton">Next</p>
+	<% end %>
       </center>
   </div>
 

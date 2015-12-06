@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#blurred{
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-}
-
-
 .peoplepage{
 	z-index: -1;
 	background-color:white;
@@ -230,9 +221,10 @@
 	top:15%;
 	left:90px;
 	img{
+		position:relative;
 		float:left;
 		margin-left: 60px;
-		margin-top:50px;
+		top: 10%;
 	}
 	.textArea{
 		margin-left:40px;
@@ -240,8 +232,8 @@
 		width:520px;
 		position:relative;
 		float:left;
-		top: 50%;
-		transform: translateY(-60%);
+		top: 40%;
+		transform: translateY(-50%);
 	}
 	#name{
 		position:relative;
