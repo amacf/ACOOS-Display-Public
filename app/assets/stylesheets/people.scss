@@ -14,8 +14,10 @@
 .peoplepage{
 	z-index: -1;
 	background-color:white;
-	width:1280px;
-	height:1024px;
+	width:1000px;
+	padding:0px;
+	margin:0px;
+	height:900px;
 	.searchButton {
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
 		background:-moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
