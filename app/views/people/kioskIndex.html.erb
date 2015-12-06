@@ -19,8 +19,8 @@ $(document).on('ready page:load',function(){
   <div class="navbar">
 
   <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, method: "get") do %>
-  <input type="text" name="search" value=<%= params[:search] %>>
-  <input type="submit" value="Search">
+  <input type="text" name="search" id="textBox" value=<%= params[:search] %>>
+  <input type="submit" value="&#128269;" id="searchButton">
   <% end %>
   </div>
 
