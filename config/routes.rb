@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'static_pages#home'
+
   get 'keyOpen' => 'people#openKeyboard'
   get 'keyClose' => 'people#closeKeyboard'
-
-  resources :background_images
 
   get '' => 'static_pages#home'
   get 'nav' => 'static_pages#nav'
@@ -16,9 +17,18 @@ Rails.application.routes.draw do
   get 'artifacts/aroianHistory' => 'static_pages#aroianHistory'
   get 'artifacts/kazarianHistory' => 'static_pages#kazarianHistory'
 
-  resources :people
+  get 'admin' => 'people#index'
+  get 'admin/newPerson' => 'people#new'
+  get 'admin/showPerson/(/:id)' => 'people#show', as: "admin_showPerson"
+  get 'admin/editPerson/:id' => 'people#edit', as: "admin_editPerson"
+  patch 'admin/showPerson/:id' => 'people#update'
+  put 'admin/showPerson/:id' => 'people#update'
+  post 'admin/showPerson' => 'people#create';
+  delete 'admin/deletePerson/:id' => 'people#destroy', as: "admin_deletePerson"
 
-  root 'static_pages#home'
+  #resources :background_images
+  #resources :people;
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

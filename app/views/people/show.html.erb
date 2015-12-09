@@ -1,3 +1,10 @@
+<div class="navbar" id="adminpage">
+<%= link_to 'Back', admin_path, class: "searchButton", style:"padding-left:50px;padding-top:25px"%>
+</div>
+
+
+<div class="content" id="formpage">
+<br><br>
 <%= image_tag(@person.image.url(:small)) %>
 
 <p>
@@ -6,17 +13,17 @@
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
+  <strong>Date of Birth:</strong>
   <%= @person.birthdate %>
 </p>
 
 <p>
-  <strong>Place of Birth:</strong>
+  <strong>From:</strong>
   <%= @person.birthplace %>
 </p>
 
 <p>
-  <strong>Deathdate:</strong>
+  <strong>Date of Death:</strong>
   <%= @person.deathdate %>
 </p>
 
@@ -26,9 +33,10 @@
 </p>
 
 <p>
-  <strong>Story:</strong>
+  <strong>Description:</strong>
   <%= @person.story %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Edit', admin_editPerson_path(@person) %> |
+<%= link_to 'Back', admin_path %>
+</div>

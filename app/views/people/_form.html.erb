@@ -1,4 +1,4 @@
-<%= form_for(@person) do |f| %>
+<%= form_for @person, url: admin_showPerson_path(@person) do |f| %>
   <% if @person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -20,23 +20,23 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :birthdate %><br>
+    <%= f.label "Date of Birth" %><br>
     <%= f.text_field :birthdate %>
   </div>
   <div class="field">
-    <%= f.label :birthplace %><br>
+    <%= f.label "From" %><br>
     <%= f.text_field :birthplace %>
   </div>
   <div class="field">
-    <%= f.label :deathdate %><br>
+    <%= f.label "Date of Death" %><br>
     <%= f.text_field :deathdate %>
   </div>
   <div class="field">
-    <%= f.label :deathplace %><br>
+    <%= f.label "Place of Death" %><br>
     <%= f.text_field :deathplace %>
   </div>
   <div class="field">
-    <%= f.label :story %><br>
+    <%= f.label "Description" %><br>
     <%= f.text_area :story %>
   </div>
   <div class="actions">

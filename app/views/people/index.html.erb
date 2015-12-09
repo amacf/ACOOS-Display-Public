@@ -1,40 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="navbar" id="adminpage">
+  <%= link_to '+ New Person', admin_newPerson_path, class: "searchButton" %>
+  <h1>Total People: <%= @people.count %></h1>
+</div>
 
-<h1>Listing People: (<%= @people.count %> Total)</h1>
+<div class="content">
+  <p id="notice"><%= notice %></p>
 
-<%= link_to '+ New Person', new_person_path %>
+  <br/>
+  <br>
 
-<br/>
-<br>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Birthdate</th>
-      <th>From</th>
-      <th>Deathdate</th>
-      <th>Deathplace</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= image_tag(person.image.url(:thumb)) %></td>
-        <td><%= person.name %></td>
-        <td><%= person.birthdate %></td>
-        <td><%= person.birthplace %></td>
-        <td><%= person.deathdate %></td>
-        <td><%= person.deathplace %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Birthdate</th>
+        <th>From</th>
+        <th>Deathdate</th>
+        <th>Deathplace</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= image_tag(person.image.url(:thumb)) %></td>
+          <td><%= person.name %></td>
+          <td><%= person.birthdate %></td>
+          <td><%= person.birthplace %></td>
+          <td><%= person.deathdate %></td>
+          <td><%= person.deathplace %></td>
+          <td><%= link_to 'Show', admin_showPerson_path(person) %></td>
+          <td><%= link_to 'Edit', admin_editPerson_path(person) %></td>
+          <td><%= link_to 'Delete', admin_deletePerson_path(person), data: { confirm: 'Are you sure?' }, method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
