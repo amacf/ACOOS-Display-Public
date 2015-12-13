@@ -1,10 +1,11 @@
 <%= render :partial => "shared/redirectsHome" %>
-<link rel="prefetch" href="/iconholymartyrs-in.png">
-<link rel="prefetch" href="/cross-in.png">
+<link rel="prefetch" href=<%= image_url "iconholymartyrs-in.png" %>>
+<link rel="prefetch" href=<%= image_url "cross-in.png" %>>
 
 <span class="navpage">
 	<div class="navbar">
 	<%= button_to "Back", {controller: :static_pages, action: :home}, {id: "backButton", class: "searchButton", method: :get}%>
+	<h1 id="navTitle">Main Menu</h1>
 	</div>
 	
 	<%= link_to controller: :people, action: :kioskIndex do %>

@@ -18,9 +18,15 @@ $(document).ready(function(){
         request.send(null);
     }
     else if ($(event.target).is(".personbox")){
+      var request = new XMLHttpRequest();
+      request.open('get', '/keyClose', false);
+      request.send(null);
       showPerson($(event.target).attr("id"));
     }
     else if ($(event.target).parent().is(".personbox")){
+      var request = new XMLHttpRequest();
+      request.open('get', '/keyClose', false);
+      request.send(null);
       showPerson($(event.target).parent().attr("id"));
     }
     else if(!$(event.target).is("input")){

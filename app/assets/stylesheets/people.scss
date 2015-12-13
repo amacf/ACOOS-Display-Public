@@ -148,14 +148,14 @@
 }
 
 .peoplepage{
+	position: absolute;
 	z-index: -1;
-	background-color:white;
-	width:1000px;
+	background-image: image_url("kioskindexBackground.png");
+	width:100%;
 	padding:0px;
 	margin:0px;
-	height:900px;
+	height:100%;
 	.peoplebox{
-		background-color:white;
 		padding: 0;
 		position: absolute;
 		top:11%;
@@ -163,7 +163,6 @@
 		width:90%;
 		height:84%;
 		ul {
-			background-color:white;
 			margin: 0;
 			height:100%;
 			padding-left:0px;
@@ -173,36 +172,27 @@
 			-moz-column-fill: auto;
 			column-fill: auto;
 		}
-		a:hover{
-			background-color:white;
-		}
 		.personbox{
 			overflow: auto;
 			display: inline-block;
 			width:100%;
 			height:140px;
-			//background:#333;
-			background-color: white;
 			padding-top: 0px;
 			margin:0;
 			a{
-				background-color: white;
 				border:none;
 				text-decoration: none;
 			}
 			a:hover{
 				border:none;
-				background-color: white;
 				text-decoration: none;
 			}
 			img {
-				background-color:white;
 				clear:left;
 				float:left;
 				padding-right: 25px;
 			}
 			h2 {
-				background-color:white;
 				font-family: Arial-BoldMT;
 				font-size: 24px;
 				color: #000000;
@@ -215,7 +205,6 @@
 			p{	
 				text-decoration: none;
 				border:none;
-				background-color: white;
 				color:black;
 				padding-top:0px;
 				padding-bottom:0px;
@@ -294,7 +283,8 @@
 		position:relative;
 		float:left;
 		margin-left: 60px;
-		top: 10%;
+		top: 50%;
+	-webkit-transform: translateY(-50%);
 	}
 	.textArea{
 		margin-left:40px;
@@ -302,8 +292,8 @@
 		width:520px;
 		position:relative;
 		float:left;
-		top: 40%;
-		transform: translateY(-50%);
+		top: 50%;
+		-webkit-transform: translateY(-50%);
 	}
 	#name{
 		position:relative;

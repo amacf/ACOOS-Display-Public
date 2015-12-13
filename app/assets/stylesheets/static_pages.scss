@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#navTitle{
+	position:absolute;
+	padding:0px;
+	margin:0px;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	font-family: Century;
+	font-size:50px;
+	color:white;
+}
+
 .background-slideshow:after { 
     position: fixed;
     width: 100%;
@@ -168,18 +182,18 @@
 		background-color:#ababab;
 	}
 	#nav1 {
-		background-image: url('iconholymartyrs-out.png');
+		background-image: image_url('iconholymartyrs-out.png');
 		left:6%;
 	}
 	#nav2 {
-		background-image: url('cross-out.png');
+		background-image: image_url('cross-out.png');
 		right:6%;
 	}
 	#nav1:hover{
-		background-image: url('iconholymartyrs-in.png');
+		background-image: image_url('iconholymartyrs-in.png');
 	}
 	#nav2:hover{
-		background-image: url('cross-in.png');
+		background-image: image_url('cross-in.png');
 	}
 	#nav1:active{
 		top:19.5%;
@@ -190,7 +204,16 @@
 
 }
 
+html,body{
+	margin:0;
+	padding:0;
+}
+
 .artifactspage{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background-image: image_url("artifactsBackground.png");
 	.searchButton {
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
 		background:-moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
