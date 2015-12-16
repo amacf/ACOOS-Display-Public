@@ -43,7 +43,9 @@ $(document).ready(function(){
 <div class='peoplepage'>
   <div class="navbar">
   <%= button_to "Back", {controller: :static_pages, action: :nav}, {id: "backButton", class: "searchButton", method: :get}%>
-
+  <% if !(params[:search].nil?) && !(params[:search].empty?) %>
+    <%= button_to "Clear", {controller: :people, action: :kioskIndex}, {id: "clearButton", class: "searchButton", method: :get}%>
+  <% end %>
   <%= form_tag({controller: :people, action: :kioskIndex, page: 1}, id: "searchForm" ,method: "get") do %>
   <input type="text" name="search" id="textBox" value=<%= params[:search] %>>
   <input type="submit" class="searchButton" id="searchButton" value="Search">
