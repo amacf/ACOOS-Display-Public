@@ -1,1 +1,0 @@
-$(document).ready(function(n){n(function(){n(".background-slideshow img:gt(0)").hide(),setInterval(function(){n(".background-slideshow :first-child").fadeOut().next("img").fadeIn().end().appendTo(".background-slideshow")},1e4)})});

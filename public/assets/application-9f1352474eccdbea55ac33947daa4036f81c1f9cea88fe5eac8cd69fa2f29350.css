@@ -1,0 +1,845 @@
+/* line 5, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar {
+  z-index: 3;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 10%;
+  /* Rectangle 1: */
+  background: #202020;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.5);
+}
+/* line 15, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar #searchForm {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+}
+/* line 19, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar #searchForm #textBox {
+  height: 50px;
+  width: 275px;
+  padding-left: 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: arial;
+  font-size: 22px;
+}
+/* line 29, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar #searchForm #searchButton {
+  margin-top: 0px;
+  padding-left: 8px;
+  height: 60px;
+}
+/* line 35, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar #backButton {
+  height: 60px;
+  margin-left: 2%;
+  margin-top: 20px;
+  padding-left: 6px;
+}
+/* line 41, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.navbar #clearButton {
+  position: absolute;
+  height: 60px;
+  top: 24px;
+  right: 418px;
+  padding-left: 5px;
+}
+
+/* line 50, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.searchButton {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
+  background: -moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -webkit-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -o-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -ms-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: linear-gradient(to bottom, #e8e8e8 5%, #ababab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ababab',GradientType=0);
+  background-color: #e8e8e8;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #525252;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #595959;
+  width: 100px;
+  padding-left: 18px;
+  height: 50px;
+}
+
+/* line 74, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.searchButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ababab), color-stop(1, #e8e8e8));
+  background: -moz-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -webkit-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -o-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -ms-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: linear-gradient(to bottom, #ababab 5%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ababab', endColorstr='#e8e8e8',GradientType=0);
+  background-color: #ababab;
+}
+
+/* line 84, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.searchButton:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 90, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#adminpage h1 {
+  position: absolute;
+  color: white;
+  top: 50%;
+  margin: 0px;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 100, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#adminpage .searchButton {
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 100px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 35px;
+  padding-top: 10px;
+  color: black;
+}
+
+/* line 115, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.content {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  top: 10%;
+  width: 95%;
+}
+/* line 123, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.content table {
+  width: 100%;
+  font-size: 13px;
+}
+
+/* line 129, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#formpage {
+  font-size: 15px;
+  width: 50%;
+}
+/* line 132, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#formpage input[type='text'] {
+  width: 100%;
+  height: 20px;
+}
+/* line 136, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#formpage textarea {
+  width: 100%;
+  height: 100px;
+}
+
+/* line 143, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+#formback .searchButton {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 100px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-left: 35px;
+  padding-top: 10px;
+  color: black;
+}
+
+/* line 157, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage {
+  position: absolute;
+  z-index: -1;
+  background-image: url(/assets/kioskindexBackground-da7dffd05a31c9bf7bb5b70889a57a9db465bee5b2d8ed928fd1cd84c3d70f8a.png);
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+/* line 165, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox {
+  padding: 0;
+  position: absolute;
+  top: 11%;
+  left: 2%;
+  width: 90%;
+  height: 84%;
+}
+/* line 172, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox ul {
+  margin: 0;
+  height: 100%;
+  padding-left: 0px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -moz-column-fill: auto;
+  column-fill: auto;
+}
+/* line 182, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox {
+  overflow: auto;
+  display: inline-block;
+  width: 100%;
+  height: 140px;
+  padding-top: 0px;
+  margin: 0;
+}
+/* line 189, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox a {
+  border: none;
+  text-decoration: none;
+}
+/* line 193, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox a:hover {
+  border: none;
+  text-decoration: none;
+}
+/* line 197, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox img {
+  clear: left;
+  float: left;
+  padding-right: 25px;
+}
+/* line 202, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox h2 {
+  font-family: Arial-BoldMT;
+  font-size: 24px;
+  color: #000000;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  margin: 0;
+}
+/* line 212, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .peoplebox .personbox p {
+  text-decoration: none;
+  border: none;
+  color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 12px;
+}
+/* line 223, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar {
+  position: absolute;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  top: 93%;
+}
+/* line 230, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+}
+/* line 236, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar a {
+  text-decoration: none;
+  color: black;
+}
+/* line 240, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar h2 {
+  font-family: Arial-BoldMT;
+  font-size: 24px;
+  color: #000000;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  margin: 0;
+}
+/* line 250, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar p {
+  display: inline;
+  font-family: Arial;
+  font-size: 20px;
+  color: gray;
+}
+/* line 256, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar #leftButton {
+  margin-right: 35px;
+}
+/* line 259, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar #rightButton {
+  margin-left: 35px;
+}
+/* line 262, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar form {
+  display: inline;
+}
+/* line 265, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar #nextButton {
+  padding-left: 5px;
+  padding-top: 0px;
+  margin-left: 25px;
+  margin-top: 0px;
+}
+/* line 271, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.peoplepage .pagebar #prevButton {
+  padding-left: 5px;
+  padding-top: 0px;
+  margin-right: 25px;
+  margin-top: 0px;
+}
+
+/* line 279, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  position: absolute;
+  z-index: 3;
+  width: 1100px;
+  height: 700px;
+  background: #202020;
+  top: 15%;
+  left: 90px;
+}
+/* line 289, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv img {
+  position: relative;
+  float: left;
+  margin-left: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+/* line 296, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv .textArea {
+  margin-left: 40px;
+  height: auto;
+  width: 520px;
+  position: relative;
+  float: left;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+/* line 305, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #name {
+  position: relative;
+  display: block;
+  color: white;
+  font-family: Arial-BoldMT;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+/* line 314, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #datestring {
+  position: relative;
+  display: block;
+  color: white;
+}
+/* line 318, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #datestring p {
+  font-size: 24px;
+  line-height: 21px;
+}
+/* line 323, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #placestring {
+  color: white;
+  position: relative;
+  display: block;
+}
+/* line 327, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #placestring p {
+  font-size: 24px;
+  line-height: 21px;
+}
+/* line 332, /home/pi/ACOOS-Display/app/assets/stylesheets/people.scss */
+.overlayDiv #story {
+  color: white;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 21px;
+}
+/* line 1, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/pi/ACOOS-Display/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 6, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+#navTitle {
+  white-space: nowrap;
+  display: inline-block;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  font-family: Century;
+  font-size: 50px;
+  color: white;
+}
+
+/* line 21, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.background-slideshow:after {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+/* line 30, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.background-slideshow img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+/* line 40, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage h2 {
+  /* WELCOME TO: */
+  font-family: Arial-BoldMT;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 21px;
+  margin-top: 60px;
+}
+/* line 49, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage h1 {
+  /* Armenian Church of O: */
+  font-family: Century;
+  font-size: 54px;
+  color: #FFFFFF;
+  line-height: 39px;
+  margin-top: 30px;
+}
+/* line 57, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage p {
+  /* First Armenian Churc: */
+  font-family: Arial-BoldMT;
+  font-size: 22px;
+  color: #FFFFFF;
+  line-height: 18px;
+}
+/* line 66, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage .titlebox {
+  background: rgba(36, 36, 36, 0.5);
+  width: 100%;
+  top: 14%;
+  position: absolute;
+  left: 0px;
+}
+/* line 76, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage .taptext {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  left: 0px;
+}
+/* line 81, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.homepage .taptext h1 {
+  font-family: Century;
+  font-size: 44px;
+  color: #FFFFFF;
+  line-height: 39px;
+  text-shadow: -3px -3px 6px rgba(0, 0, 0, 0.8), 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* line 93, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .searchButton {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
+  background: -moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -webkit-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -o-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -ms-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: linear-gradient(to bottom, #e8e8e8 5%, #ababab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ababab',GradientType=0);
+  background-color: #e8e8e8;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #525252;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #595959;
+  width: 100px;
+  padding-left: 18px;
+  height: 50px;
+}
+/* line 117, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .searchButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ababab), color-stop(1, #e8e8e8));
+  background: -moz-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -webkit-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -o-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -ms-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: linear-gradient(to bottom, #ababab 5%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ababab', endColorstr='#e8e8e8',GradientType=0);
+  background-color: #ababab;
+}
+/* line 127, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .searchButton:active {
+  position: relative;
+  top: 1px;
+}
+/* line 131, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 10%;
+  /* Rectangle 1: */
+  background: #202020;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.5);
+}
+/* line 140, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbar #backButton {
+  height: 60px;
+  margin-left: 2%;
+  margin-top: 20px;
+  padding-left: 6px;
+}
+/* line 147, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbutton {
+  -webkit-border-radius: 75px;
+  position: fixed;
+  width: 529px;
+  height: 734px;
+  top: 19%;
+}
+/* line 154, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbutton h1 {
+  position: absolute;
+  font-family: Century;
+  font-size: 75px;
+  color: #FFFFFF;
+  line-height: 80px;
+  margin-top: 100px;
+  text-shadow: -3px -3px 6px rgba(0, 0, 0, 0.8), 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+/* line 163, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbutton h2 {
+  position: absolute;
+  font-family: Arial-BoldMT;
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 21px;
+  margin-top: 80%;
+  text-shadow: -3px -3px 6px rgba(0, 0, 0, 0.8), 3px 3px 6px rgba(0, 0, 0, 0.8);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+}
+/* line 176, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage .navbutton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ababab), color-stop(1, #e8e8e8));
+  background: -moz-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -webkit-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -o-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -ms-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: linear-gradient(to bottom, #ababab 5%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ababab', endColorstr='#e8e8e8',GradientType=0);
+  background-color: #ababab;
+}
+/* line 186, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav1 {
+  background-image: url(/assets/iconholymartyrs-out-571e4adbac7c0b6a72187f1f4c9dbd8a5e3bc3cfedacac1ee2dd9737c98b0c7a.png);
+  left: 6%;
+}
+/* line 190, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav2 {
+  background-image: url(/assets/cross-out-5e9b8ed9705b782363018e39648f73a86331602384950b5ff80d89ae4ecbc5d6.png);
+  right: 6%;
+}
+/* line 194, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav1:hover {
+  background-image: url(/assets/iconholymartyrs-in-e17e1da03226bbf7085beceacd03ef9cf9ee515a42a5007e486a222f5bc5d544.png);
+}
+/* line 197, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav2:hover {
+  background-image: url(/assets/cross-in-8b36ad98765c8e6e0f7acce31e6e3a4ef109be989c1db4876d36c44e4ed6317e.png);
+}
+/* line 200, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav1:active {
+  top: 19.5%;
+}
+/* line 203, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.navpage #nav2:active {
+  top: 19.5%;
+}
+
+/* line 209, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 214, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+#mainPage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/artifactsBackground-bdf06e9d27ce431707c9a3f7438a3488b7ae38185afab344d4fc64dc1d3fd359.png);
+}
+
+/* line 221, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .searchButton {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #ababab));
+  background: -moz-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -webkit-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -o-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: -ms-linear-gradient(top, #e8e8e8 5%, #ababab 100%);
+  background: linear-gradient(to bottom, #e8e8e8 5%, #ababab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ababab',GradientType=0);
+  background-color: #e8e8e8;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #525252;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #595959;
+  width: 100px;
+  padding-left: 18px;
+  height: 50px;
+}
+/* line 245, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .searchButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ababab), color-stop(1, #e8e8e8));
+  background: -moz-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -webkit-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -o-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: -ms-linear-gradient(top, #ababab 5%, #e8e8e8 100%);
+  background: linear-gradient(to bottom, #ababab 5%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ababab', endColorstr='#e8e8e8',GradientType=0);
+  background-color: #ababab;
+}
+/* line 255, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .searchButton:active {
+  position: relative;
+  top: 1px;
+}
+/* line 259, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .navbar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 10%;
+  /* Rectangle 1: */
+  background: #202020;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.5);
+}
+/* line 268, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .navbar #backButton {
+  height: 60px;
+  margin-left: 2%;
+  margin-top: 20px;
+  padding-left: 6px;
+}
+/* line 275, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .artifactButtons {
+  width: 99%;
+  position: absolute;
+  top: 11%;
+  padding: 0px;
+  margin-left: 0px;
+  overflow-y: auto;
+}
+/* line 283, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .artifactButton {
+  margin-left: 52px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  float: left;
+  position: relative;
+  padding-top: 5px;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  background-color: #202020;
+  width: 250px;
+  height: 250px;
+  background: -webkit-linear-gradient(top, #606060 5%, #202020 100%);
+  box-shadow: 4px 5px 6px #888888;
+}
+/* line 297, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .artifactButton h1 {
+  font-family: Arial-BoldMT;
+  line-height: 32px;
+  width: 100%;
+  position: absolute;
+  color: white;
+  text-decoration: none;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+}
+/* line 308, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .artifactButton:hover {
+  background: -webkit-linear-gradient(top, #202020 5%, #606060 100%);
+  box-shadow: 0px 0px 6px #888888;
+}
+/* line 312, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .artifactButton:active {
+  position: relative;
+  top: 1px;
+}
+/* line 316, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .textdiv {
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  width: 70%;
+  position: absolute;
+  top: 11%;
+}
+/* line 323, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .textdiv p {
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+}
+/* line 328, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage .textdiv h2 {
+  font-size: 30px;
+}
+/* line 332, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage #full {
+  width: 100%;
+}
+/* line 334, /home/pi/ACOOS-Display/app/assets/stylesheets/static_pages.scss */
+.artifactspage #full img {
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+*:not(input) {
+    -webkit-user-drag: none; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
