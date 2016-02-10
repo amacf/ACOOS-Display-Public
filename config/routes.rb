@@ -26,7 +26,10 @@ Rails.application.routes.draw do
   post 'admin/showPerson' => 'people#create';
   delete 'admin/deletePerson/:id' => 'people#destroy', as: "admin_deletePerson"
 
-  #resources :background_images
+  get 'admin/background' => 'background_images#index'
+  delete 'admin/deleteBackground/:id' => 'background_images#destroy', as: "admin_deleteBackground"
+  post 'admin/showBackground' => 'background_images#create';
+  get 'admin/newBackground' => 'background_images#new'
   #resources :people;
 
   # The priority is based upon order of creation: first created -> highest priority.

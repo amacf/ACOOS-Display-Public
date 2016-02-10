@@ -1,5 +1,6 @@
 <div class="navbar" id="adminpage">
   <%= link_to '+ New Person', admin_newPerson_path, class: "searchButton" %>
+  <%= link_to 'Backgrounds', admin_background_path, class: "searchButton", style: "margin-left: 150px;padding-left:10px;width:125px;padding-top:20px;height:40px" %>
   <h1>Total People: <%= @people.count %></h1>
 </div>
 
